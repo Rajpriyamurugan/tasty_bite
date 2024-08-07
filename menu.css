@@ -1,0 +1,175 @@
+/* Add to your existing CSS file (style.css) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+a {
+    text-decoration: none;
+    color: #e8491d;;
+}
+
+a:hover {
+    color: #e8491d;;
+}
+
+/* Ribbon Styles */
+
+/* Header Styles */
+header {
+    background-color:#e8491d ;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header .logo {
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+
+header .logo i {
+    margin-right: 10px;
+}
+header .navbar a {
+    font-size: 2rem;
+    margin-left: 2rem;
+    color: #666;
+}
+
+/* Manage Menu Section */
+.manage-menu {
+    padding: 2rem;
+    background: #f9f9f9;
+}
+
+.manage-menu .heading {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.manage-menu .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.manage-menu form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.manage-menu input[type="text"],
+.manage-menu input[type="number"],
+.manage-menu input[type="file"],
+.manage-menu button {
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    width: 100%;
+}
+
+.manage-menu button {
+    background:  #f3715a;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.manage-menu button:hover {
+    background:  #df482d;
+}
+
+.manage-menu .menu-list {
+    text-align: center;
+}
+
+.manage-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.manage-menu ul li {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.manage-menu ul li img {
+    width: 100px;
+    height: auto;
+    border-radius: 0.5rem;
+    margin-right: 1rem;
+}
+
+.manage-menu ul li .item-info {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.manage-menu ul li .item-info h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.manage-menu ul li .item-info p {
+    margin: 0;
+    color: #666;
+}
+
+.manage-menu ul li .item-info .price {
+    font-size: 1.5rem;
+    color:  #fa6d54;
+    font-weight: bold;
+}
+
+.manage-menu ul li .item-actions {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.manage-menu ul li .item-actions button {
+    background: #f44336;
+    color: #fff;
+    border: none;
+    padding: 0.5rem;
+    margin-left: 0.5rem;
+    cursor: pointer;
+    border-radius: 0.3rem;
+}
+
+.manage-menu ul li .item-actions button.edit {
+    background: #ec5034;
+}
+
+.manage-menu ul li .item-actions button:hover {
+    opacity: 0.8;
+}

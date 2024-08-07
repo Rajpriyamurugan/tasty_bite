@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard - Tasty Bites</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="user.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background: #333;
+            color: #fff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding-top: 20px;
+            text-align: center;
+        }
+
+        .sidebar a {
+            display: block;
+            color: #fff;
+            padding: 15px;
+            text-decoration: none;
+            margin-bottom: 10px;
+        }
+
+        .sidebar a:hover {
+            background: #575757;
+        }
+
+        .main-content {
+            margin-left: 250px;
+            padding: 20px;
+        }
+
+        .card {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h3 {
+            margin-top: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background: #f4f4f4;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .form-group button {
+            background: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form-group button:hover {
+            background: #575757;
+        }
+
+        .settings-section {
+            margin-bottom: 30px;
+        }
+
+        .settings-section h4 {
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+
+            .sidebar a {
+                float: left;
+                padding: 15px;
+                text-align: center;
+                width: 100%;
+            }
+
+            .main-content {
+                margin-left: 0;
+            }
+        }
+
+        .logout-button {
+            position: absolute;
+            bottom: 20px;
+            width: calc(100% - 40px);
+            background-color: #ff4d4d;
+            padding: 15px;
+            text-align: center;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .logout-button:hover {
+            background-color: #e60000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sidebar">
+        <h2>User Dashboard</h2>
+        <a href="#profile"><i class="fas fa-user"></i> Profile</a>
+        <a href="#menu"><i class="fas fa-utensils"></i> Browse Menu</a>
+        <a href="#orders"><i class="fas fa-history"></i> Order History</a>
+        <a href="#settings"><i class="fas fa-cogs"></i> Account Settings</a>
+        <a href="#logout" class="logout-button"><i class="fas fa-sign-out-alt"></i> Logout</a>
+    </div>
+
+    <div class="main-content">
+        <section id="profile" class="card">
+            <h3>Profile</h3>
+            <p>Name: John Doe</p>
+            <p>Email: john.doe@example.com</p>
+        </section>
+
+        <section id="menu" class="card">
+            <h3>Browse Menu</h3>
+            <table>
+                <tr>
+                    <th>Food Item</th>
+                    <th>Price</th>
+                    <th>Description</th>
+                    <th>Category</th>
+                    <th>Action</th>
+                </tr>
+                <tr>
+                    <td>Tasty Burger</td>
+                    <td>$5.99</td>
+                    <td>A delicious burger with cheese and lettuce.</td>
+                    <td>Burger</td>
+                    <td><button>Add to Order</button></td>
+                </tr>
+                <tr>
+                    <td>Cheese Pizza</td>
+                    <td>$8.99</td>
+                    <td>A classic cheese pizza with a crispy crust.</td>
+                    <td>Pizza</td>
+                    <td><button>Add to Order</button></td>
+                </tr>
+                <tr>
+                    <td>Chocolate Cake</td>
+                    <td>$4.99</td>
+                    <td>A rich and moist chocolate cake.</td>
+                    <td>Dessert</td>
+                    <td><button>Add to Order</button></td>
+                </tr>
+                <!-- Add more menu items as needed -->
+            </table>
+        </section>
+
+        <section id="orders" class="card">
+            <h3>Order History</h3>
+            <table>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Food Item</th>
+                    <th>Status</th>
+                    <th>Date</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Tasty Burger</td>
+                    <td>Completed</td>
+                    <td>2024-07-20</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Cheese Pizza</td>
+                    <td>Completed</td>
+                    <td>2024-07-22</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Chocolate Cake</td>
+                    <td>Completed</td>
+                    <td>2024-07-24</td>
+                </tr>
+                <!-- Add more orders as needed -->
+            </table>
+        </section>
+
+        <section id="settings" class="card">
+            <h3>Account Settings</h3>
+            <div class="settings-section">
+                <h4>Profile Settings</h4>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" value="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" value="john.doe@example.com">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit">Save Changes</button>
+                    </div>
+                </form>
+            </div>
+            <div class="settings-section">
+                <h4>Password Settings</h4>
+                <form>
+                    <div class="form-group">
+                        <label for="currentPassword">Current Password</label>
+                        <input type="password" id="currentPassword" name="currentPassword">
+                    </div>
+                    <div class="form-group">
+                        <label for="newPassword">New Password</label>
+                        <input type="password" id="newPassword" name="newPassword">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit">Update Password</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section id="logout" class="card">
+            <h3>Logout</h3>
+            <p>Are you sure you want to logout?</p>
+            <a href="login.html" class="logout-button">Logout</a>
+        </section>
+    </div>
+</body>
+
+</html>

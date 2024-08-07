@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard - Online Food Delivery</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            margin-top: 30px;
+        }
+
+        .card {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: none;
+            margin-bottom: 20px;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+        }
+
+        .btn-primary,
+        .btn-secondary,
+        .btn-info {
+            width: 100%;
+        }
+
+        .modal-header {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .modal-header .close {
+            color: white;
+        }
+
+        .list-group-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .badge {
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Food Delivery</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#accountModal" data-toggle="modal">Account Settings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#ordersModal" data-toggle="modal">Order History</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#favoritesModal" data-toggle="modal">Favorites</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2 class="text-center mb-4">Welcome to Your Dashboard!</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Recent Orders</h5>
+                        <p class="card-text">You have 3 recent orders pending delivery.</p>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#ordersModal">View Orders</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Favorite Dishes</h5>
+                        <p class="card-text">Check your favorite dishes and order them again.</p>
+                        <button class="btn btn-info" data-toggle="modal" data-target="#favoritesModal">View Favorites</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Account Settings</h5>
+                        <p class="card-text">Update your personal information and address.</p>
+                        <button class="btn btn-secondary" data-toggle="modal" data-target="#accountModal">Edit Account</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Account Modal -->
+    <div class="modal fade" id="accountModal" tabindex="-1" aria-labelledby="accountModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="accountModalLabel">Account Settings</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="accountForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Address</label>
+                            <input type="text" class="form-control" id="address" placeholder="Enter your address">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save changes</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Orders Modal -->
+    <div class="modal fade" id="ordersModal" tabindex="-1" aria-labelledby="ordersModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ordersModalLabel">Order History</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <span>Order #12345</span>
+                            <span class="badge badge-primary badge-pill">Delivered</span>
+                        </li>
+                        <li class="list-group-item">
+                            <span>Order #12346</span>
+                            <span class="badge badge-secondary badge-pill">Pending</span>
+                        </li>
+                        <li class="list-group-item">
+                            <span>Order #12347</span>
+                            <span class="badge badge-info badge-pill">In Progress</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Favorites Modal -->
+    <div class="modal fade" id="favoritesModal" tabindex="-1" aria-labelledby="favoritesModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="favoritesModalLabel">Favorite Dishes</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-group">
+                        <li class="list-group-item">Pizza Margherita</li>
+                        <li class="list-group-item">Spaghetti Carbonara</li>
+                        <li class="list-group-item">Caesar Salad</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap and jQuery JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // JavaScript to handle form submissions
+        document.addEventListener('DOMContentLoaded', () => {
+            const accountForm = document.querySelector('#accountForm');
+
+            accountForm.addEventListener('submit', (event) => {
+                event.preventDefault(); // Prevent the default form submission
+
+                // Capture form data
+                const name = document.querySelector('#name').value;
+                const email = document.querySelector('#email').value;
+                const address = document.querySelector('#address').value;
+
+                // Display an alert with the entered data (for demonstration)
+                alert(`Account details updated:\nName: ${name}\nEmail: ${email}\nAddress: ${address}`);
+
+                // Logic to send data to the server or update the UI can be added here
+            });
+        });
+    </script>
+</body>
+</html>

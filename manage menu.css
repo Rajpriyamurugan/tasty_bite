@@ -1,0 +1,112 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+/* Card Styles */
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+/* Heading Style */
+.card h3 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    color: #555;
+    font-size: 16px;
+}
+
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus,
+textarea:focus {
+    border-color:  #ff6347;
+    outline: none;
+}
+
+/* Button Styles */
+button {
+    padding: 10px 20px;
+    color: white;
+    background-color: #ff6347;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+}
+
+button a {
+    color: white;
+    text-decoration: none;
+}
+
+button:hover {
+    background-color: #e9482b ;
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card {
+        padding: 15px;
+    }
+
+    label,
+    input[type="text"],
+    input[type="number"],
+    select,
+    textarea {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}

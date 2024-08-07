@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="ribbon">
+        <marquee> <p>Get 20% off your first order! Use code: WELCOME20</p></marquee>
+     </div>
+    <header>
+        <h3><img src="images/logo2.png" alt="tasty bites"></h3>
+        <nav class="navbar">
+            
+    <div class="sidebar">
+        <a href="a1.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+        <a href="manage ordeer.html"><i class="fas fa-receipt"></i> Manage Orders</a>
+        <a href="manage menu.html"><i class="fas fa-utensils"></i> Manage Menu</a>
+        <a href="menu.html"><i class="fas fa-utensils">Add Menu Item</i></a>
+        <a href="settings.html"><i class="fas fa-cogs"></i> Settings</a>
+        <a href="logout.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+    </div>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="dashboard">
+            <div class="card">
+                <h3>Total Orders</h3>
+                <p>1500</p>
+            </div>
+            <div class="card">
+                <h3>Total Customers</h3>
+                <p>450</p>
+            </div>
+            <div class="card">
+                <h3>Total Revenue</h3>
+                <p>$50,000</p>
+            </div>
+            <div class="card">
+                <h3>Pending Orders</h3>
+                <p>10</p>
+            </div>
+            <div class="card">
+                <h3>Total Delivery</h3>
+                <p>1000</p>
+            </div>
+        </div>
+        <br>
+
+
+        <br>
+        <div class="dashboard">
+            <div class="chart-container">
+                <h2>Order Distribution</h2>
+                <canvas id="pieChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <h2>Monthly Orders</h2>
+                <canvas id="barChart"></canvas>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Chart.js Library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Pie Chart
+        const ctxPie = document.getElementById('pieChart').getContext('2d');
+        const pieChart = new Chart(ctxPie, {
+            type: 'pie',
+            data: {
+                labels: ['Pizza', 'Burgers', 'Sushi', 'Pasta'],
+                datasets: [{
+                    data: [30, 25, 20, 25],
+                    backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0']
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+
+        // Bar Chart
+        const ctxBar = document.getElementById('barChart').getContext('2d');
+        const barChart = new Chart(ctxBar, {
+            type: 'bar',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                datasets: [{
+                    label: 'Number of Orders',
+                    data: [100, 120, 150, 170, 180, 200],
+                    backgroundColor: '#007BFF',
+                    borderColor: '#0056b3',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+   </body> 
+</html>

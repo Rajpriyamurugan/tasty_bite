@@ -1,0 +1,243 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Ribbon Styles */
+.ribbon {
+    background-color:  rgb(143, 137, 137);
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 7px 0;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom : 5%;
+    height:80px;
+    font-family:'Nunito', sans-serif ;
+}
+
+header img {
+    width: 100px;
+    height:70px;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 5px;
+    display: flex;
+    gap: 10px;
+    align-items: right;
+}
+
+header nav ul li {
+    margin: 0 15px;
+    display: inline;
+}
+
+header nav ul li a {
+    font-size: 18px;
+    font-weight: bold;
+    color: #666;
+    transition: color 0.3s;
+    font-family:'Nunito', sans-serif ;
+    padding: 10px 13px;
+}
+
+header nav ul li a:hover {
+    color: #ff6347;
+}
+
+.btn0 {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn0:hover {
+    background-color: #e5533d;
+}
+
+/* Order Section */
+.order {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.header1{
+    margin-bottom:20px;
+}
+form button{
+    width:100%;
+    height:40px;
+    background-color: #e5533d;
+    color: white;
+    font-size:20px;
+}
+.order .heading {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.order .row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.order form {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    text-align: left;
+}
+
+.order .inputBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.order input,
+.order textarea {
+    width: calc(50% - 10px);
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.order textarea {
+    width: 100%;
+    resize: none;
+}
+
+.order input[type="submit"] {
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-content {
+    margin: 10px;
+    max-width: 300px;
+}
+
+.footer-content h3 {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.footer-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-content ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.footer-content ul li a {
+    color: white;
+    transition: color 0.3s;
+}
+
+.footer-content ul li a:hover {
+    color: #ff6347;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.social-icons li {
+    margin: 0 10px;
+}
+
+.social-icons li a {
+    font-size: 24px;
+    color: white;
+    transition: color 0.3s;
+}
+
+.social-icons li a:hover {
+    color: #ff6347;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    .footer .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .order .inputBox {
+        flex-direction: column;
+    }
+
+    .order input,
+    .order textarea {
+        width: 100%;
+    }
+}

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Manager Dashboard</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="resturant manager.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <h2>Dashboard</h2>
+        <a href="#overview"><i class="fas fa-tachometer-alt"></i> Overview</a>
+        <a href="#menu"><i class="fas fa-utensils"></i> Menu</a>
+        <a href="#orders"><i class="fas fa-receipt"></i> Orders</a>
+        <a href="#customers"><i class="fas fa-users"></i> Customers</a>
+        <a href="#reports"><i class="fas fa-chart-line"></i> Reports</a>
+        <a href="#settings"><i class="fas fa-cogs"></i> Settings</a>
+        <a href="#logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+    </div>
+
+    <div class="main-content">
+        <section id="overview" class="card">
+            <h3>Overview</h3>
+            <div class="metric-cards">
+                <div class="metric-card">
+                    <h4>325</h4>
+                    <p>Total Menu Items</p>
+                </div>
+                <div class="metric-card">
+                    <h4>$425K</h4>
+                    <p>Total Revenue</p>
+                </div>
+                <div class="metric-card">
+                    <h4>415</h4>
+                    <p>Total Orders</p>
+                </div>
+                <div class="metric-card">
+                    <h4>985</h4>
+                    <p>Total Customers</p>
+                </div>
+                <div class="metric-card">
+                    <h4>$154K</h4>
+                    <p>Daily Revenue</p>
+                </div>
+                <div class="metric-card">
+                    <h4>845</h4>
+                    <p>Total Sessions</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="menu" class="card">
+            <h3>Menu</h3>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <img src="https://via.placeholder.com/150" alt="Food Item">
+                    <p>Pan Noodles</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://via.placeholder.com/150" alt="Food Item">
+                    <p>Veg Check 23 Fried</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://via.placeholder.com/150" alt="Food Item">
+                    <p>Aloo Tikki Burger</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://via.placeholder.com/150" alt="Food Item">
+                    <p>Everyday Plak</p>
+                </div>
+                <!-- Add more menu items as needed -->
+            </div>
+        </section>
+
+        <section id="orders" class="card">
+            <h3>Orders</h3>
+            <table>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Customer</th>
+                    <th>Item</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>John Doe</td>
+                    <td>Tasty Burger</td>
+                    <td><span class="status pending">Pending</span></td>
+                    <td><button>Update</button> <button>Delete</button></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Jane Smith</td>
+                    <td>Pan Noodles</td>
+                    <td><span class="status completed">Completed</span></td>
+                    <td><button>Update</button> <button>Delete</button></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Sam Brown</td>
+                    <td>Veg Check 23 Fried</td>
+                    <td><span class="status in-progress">In Progress</span></td>
+                    <td><button>Update</button> <button>Delete</button></td>
+                </tr>
+                <!-- Add more orders as needed -->
+            </table>
+        </section>
+
+        <section id="customers" class="card">
+            <h3>Customers</h3>
+            <table>
+                <tr>
+                    <th>Customer ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Actions</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>John Doe</td>
+                    <td>john@example.com</td>
+                    <td>123-456-7890</td>
+                    <td><button>Update</button> <button>Delete</button></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Jane Smith</td>
+                    <td>jane@example.com</td>
+                    <td>987-654-3210</td>
+                    <td><button>Update</button> <button>Delete</button></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Sam Brown</td>
+                    <td>sam@example.com</td>
+                    <td>456-789-0123</td>
+                    <td><button>Update</button> <button>Delete</button></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Emily Davis</td>
+                    <td>emily@example.com</td>
+                    <td>321-654-9870</td>
+                    <td><button>Update</button> <button>Delete</button></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Michael Johnson</td>
+                    <td>michael@example.com</td>
+                    <td>654-321-0987</td>
+                    <td><button>Update</button> <button>Delete</button></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Jessica Lee</td>
+                    <td>jessica@example.com</td>
+                    <td>789-012-3456</td>
+                    <td><button>Update</button> <button>Delete</button></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>David Wilson</td>
+                    <td>david@example.com</td>
+                    <td>012-345-6789</td>
+                    <td><button>Update</button> <button>Delete</button></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Susan Miller</td>
+                    <td>susan@example.com</td>
+                    <td>345-678-9012</td>
+                    <td><button>Update</button> <button>Delete</button></td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Robert Anderson</td>
+                    <td>robert@example.com</td>
+                    <td>678-901-2345</td>
+                    <td><button>Update</button> <button>Delete</button></td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Linda Jackson</td>
+                    <td>linda@example.com</td>
+                    <td>901-234-5678</td>
+                    <td><button>Update</button> <button>Delete</button></td>
+                </tr>
+                <!-- Add more customers as needed -->
+            </table>
+        </section>
+
+        <section id="reports" class="card">
+            <h3>Reports</h3>
+            <div class="reports">
+                <div class="report-card">
+                    <h4>Sales Report</h4>
+                    <canvas id="salesChart"></canvas>
+                </div>
+                <div class="report-card">
+                    <h4>Customer Flow</h4>
+                    <canvas id="customerChart"></canvas>
+                </div>
+                <!-- Add more reports as needed -->
+            </div>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="resturant manager.js"></script>
+</body>
+
+</html>

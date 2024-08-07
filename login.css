@@ -1,0 +1,282 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f7f7f7;
+    color: #333;
+    background: url("images/wp12451732-pizza-4k-wallpapers.jpg") no-repeat center center fixed;
+    background-size: cover; /* Ensure the image covers the entire background */
+
+}
+
+/* login.css */
+
+/* Ribbon */
+.ribbon {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Scroll to Top Button */
+#scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #343a40;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    display: none;
+}
+
+#scroll-top:hover {
+    background-color: #495057;
+}
+
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom : 5%;
+    height:80px;
+    font-family:'Nunito', sans-serif ;
+}
+
+header h3 img {
+    width: 100px;
+    height:70px;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #666;
+    font-size: 18px;
+    gap: 20px;
+    font-family:'Nunito', sans-serif ;
+    padding: 10px 13px;
+}
+
+header nav ul li a:hover {
+    color: #ff6347;
+}
+
+/* Right content (Sign In form) */
+.rightcontent {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    opacity: 0.9;
+}
+
+.rightcontent h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.fields .name {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.labelfld {
+    font-size: 14px;
+    color: #666;
+}
+
+.input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"] a {
+    color: white;
+    text-decoration: none;
+}
+
+button[type="submit"]:hover {
+    background-color: #e5533d;
+}
+
+.rightcontent p {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.rightcontent p a {
+    color: #ff6347;
+    text-decoration: none;
+}
+
+.rightcontent p a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+    background-color:#333;
+    color: white;
+    padding: 50px 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.footer-content {
+    flex: 1;
+    padding: 0 20px;
+    text-decoration: none;
+}
+
+.footer-content h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-content ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.footer-content ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.footer-content ul li a:hover {
+    color: #ff3838;
+}
+.footer-copyright {
+    background-color:rgb(143, 137, 137);
+    color:white;
+    padding: 10px 0;
+    font-size: 16px;
+    text-align: center;
+}
+footer a:hover {
+    color: var(--red);
+}
+.social-icons {
+    display: flex;
+    padding: 0;
+    justify-content: 20px; 
+}
+.social-icons li {
+    margin-right: 10px;
+    list-style: none; 
+}
+
+.social-icons a {
+    color: #333;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ff3838;
+}
+
+#scroll-top {
+    position: fixed;
+    top: -120%;
+    right: 2rem;
+    padding: .5rem 1.5rem;
+    font-size: 4rem;
+    background: var(--red);
+    color: #ffffff;
+    border-radius: .5rem;
+    transition: .5s linear;
+    z-index: 1000;
+}
+
+#scroll-top.active {
+    top: calc(100% - 12rem);
+}
+
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.loader-container.fade-out {
+    top: -120%;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0rem);
+    }
+
+    50% {
+        transform: translateY(3rem);
+    }
+}

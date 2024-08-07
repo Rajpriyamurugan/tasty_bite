@@ -1,0 +1,156 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    height: 100%;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    text-align: center;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+.sidebar a:hover {
+    background-color: #575757;
+}
+
+.main-content {
+    margin-left: 220px;
+    padding: 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    margin-top: 0;
+}
+
+/* Overview Styles */
+.metric-cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.metric-card {
+    flex: 1;
+    min-width: 150px;
+    background-color: #e3f2fd;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.metric-card h4 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.metric-card p {
+    margin: 5px 0 0;
+}
+
+/* Menu Styles */
+.menu-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.menu-item {
+    flex: 1;
+    min-width: 150px;
+    text-align: center;
+}
+
+.menu-item img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item p {
+    margin: 10px 0 0;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Orders and Customers Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+.status {
+    padding: 5px 10px;
+    border-radius: 8px;
+    color: white;
+}
+
+.status.pending {
+    background-color: orange;
+}
+
+.status.completed {
+    background-color: green;
+}
+
+.status.in-progress {
+    background-color: blue;
+}
+
+button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+/* Reports Styles */
+.reports {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.report-card {
+    flex: 1;
+    min-width: 300px;
+}

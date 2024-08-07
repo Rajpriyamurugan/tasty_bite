@@ -1,0 +1,207 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f8f8f8;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    background-color: #ff7f50;
+    color: white;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header h3 img {
+    width: 100px;
+}
+
+header .navbar {
+    display: flex;
+    gap: 20px;
+}
+
+header .navbar a {
+    color: white;
+    font-size: 16px;
+    padding: 8px 16px;
+}
+
+header .navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+.btn0 {
+    background-color: white;
+    color: #ff7f50;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn0:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Order Section Styles */
+.order {
+    padding: 60px 20px;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.heading {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.heading span {
+    color: #ff7f50;
+}
+
+.order-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.order-form,
+.order-image {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.order-form {
+    max-width: 500px;
+    width: 100%;
+}
+
+.order-form h3 {
+    margin-bottom: 20px;
+}
+
+.order-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.order-form input,
+.order-form select,
+.order-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.order-form button {
+    background-color: #ff7f50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.order-form button:hover {
+    background-color: #ff6347;
+}
+
+.order-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.footer-content h3 {
+    margin-bottom: 15px;
+}
+
+.footer-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-content ul li {
+    margin-bottom: 10px;
+}
+
+.footer-content ul li a {
+    color: white;
+}
+
+.footer-content ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 24px;
+}
+
+.footer-copyright {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Scroll to Top Button */
+#scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff7f50;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+}
+
+#scroll-top:hover {
+    background-color: #ff6347;
+}
+
+
